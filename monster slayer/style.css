@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* Heading */ 
+
+.main-heading {
+  background-color: #a8323e;
+  padding: 30px 40px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;  
+}
+
+.main-heading h1 {
+  font-weight: 600;
+}
+
+.game-endings-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 30px;
+  
+}
+
+.game-result-cnt {
+  width: 50%;
+  box-shadow: 0 0 14px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 1rem;
+
+}
+
+.game-result-cnt h2 {
+  margin-bottom: 20px;
+}
+
+/* Health Bars */
+.player-container, .monster-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.player-content-cnt, .monster-content-cnt {
+  width: 30%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.6rem 3rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
+  border-radius: 12px;
+}
+
+.player-health, .monster-health {
+  background-color: red;
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+
+.health--bar_value {
+  background-color: green;
+  width: 100%;
+  height: 2rem;
+}
+
+
+
+/* Buttons Actions */
+
+.btn-action-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.first-btn-cnt {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+.second-btn-cnt {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+button {
+  width: 12rem;
+  padding: 1rem 2rem;
+}
+
+.btn-action-container {
+  margin-top: 1rem;
+}
+
+.new-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aquamarine;
+}
+
+button {
+  background-color: #2596be;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 20px 30px;
+  color: #fff;
+}
+
+button:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  box-shadow: none;
+  color: #3f3f3f;
+  cursor: not-allowed;
+}

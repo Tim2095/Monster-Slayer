@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./main.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="main-heading">
+        <h1>Monster Slayer</h1>
+      </div>
+    </header>
+    <main id="main-app" class="main">
+      <section id="monster" class="monster-container">
+        <div class="monster-content-cnt">
+          <h2>Monster Health</h2>
+          <div class="monster-health">
+            <div class="health--bar_value" :style="monsterBarStyle"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="monster" class="player-container">
+        <div class="player-content-cnt">
+          <h2>Player Health</h2>
+          <div class="player-health">
+            <div class="health--bar_value" :style="playerBarStyle"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="game-endings-container" v-if="winner">
+        <div class="game-result-cnt">
+          <h2>Game Over!</h2>
+          <h2 v-if="winner === 'monster'">You Lost!</h2>
+          <h2 v-else-if="winner === 'player'">You Won!</h2>
+          <h2 v-else-if="winner === 'draw'">It's a Draw!</h2>
+          <button @click="newGame">Start a new game!</button>
+        </div>
+      </div>
+      <section class="btns-section" v-else>
+        <div class="btn-action-container">
+          <div class="first-btn-cnt">
+            <button  @click="playerAttack">Attack</button>
+            <button :disabled="specialAttackUse" @click="specialAttack">Special Attack</button>
+          </div>
+
+          <div class="second-btn-cnt">
+            <button @click="healPlayer">Heal</button>
+            <button @click="surrender">Surrender</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
